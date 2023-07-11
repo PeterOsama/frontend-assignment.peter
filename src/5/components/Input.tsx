@@ -10,11 +10,14 @@ import { FunctionComponent } from "react";
  * and remove the InputProps interface
  */
 
-interface InputProps {}
+interface InputProps {
+  value: string,
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
 
-const Input: FunctionComponent<InputProps> = (props) => {
+const Input: FunctionComponent<InputProps> = ({ value, handleChange}) => {
   return (
-    <div>#Input goes here#</div>
+    <div><input value={value} onChange={(e) => handleChange(e)}/></div>
   );
 };
 
