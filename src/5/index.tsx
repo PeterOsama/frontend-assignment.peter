@@ -13,7 +13,6 @@ const Task4: FunctionComponent = () => {
   }, [searchQuery])
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    debugger
     event.stopPropagation();
     setSearchQuery(event.target.value);
   }
